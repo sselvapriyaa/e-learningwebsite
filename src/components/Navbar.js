@@ -44,11 +44,12 @@ const Navbar = () => {
           {dropdown && <Dropdown />}
         </li> */}
         <li className="nav-item">
-          <Link to="/courses/addCourses" className="nav-links" onClick={closeMobileMenu}>
+          {/*<Link to="/courses/addCourses" className="nav-links" onClick={closeMobileMenu}>*/}
+          <Link to="/courses" className="nav-links" onClick={closeMobileMenu}>
             Courses
           </Link>
         </li>
-       {/*<li className="nav-item">
+       <li className="nav-item">
           <Link
             to="/contact-us"
             className="nav-links"
@@ -56,11 +57,12 @@ const Navbar = () => {
           >
             Contact-Us
           </Link>
-      </li>*/}
+      </li>
 
-        <li className="nav-item">
+       <li className="nav-item">
           <Link
-            to="/login"
+            /*to="/login"*/
+            to="/sign-in"
             className="nav-links-mobile"
             onClick={closeMobileMenu}
           >
@@ -69,7 +71,8 @@ const Navbar = () => {
         </li>
         <li className="nav-item">
           <Link
-            to="/newuser"
+            /*to="/newuser"*/
+            to="/sign-up"
             className="nav-links-mobile"
             onClick={closeMobileMenu}
           >

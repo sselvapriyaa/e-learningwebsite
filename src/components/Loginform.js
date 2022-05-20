@@ -29,7 +29,8 @@ const Loginform = () => {
       password: password,
     };
     dispatch(loginAction(postData));
-    navigate('/courses/addCourses');
+    /*navigate('/courses/addCourses');*/
+    navigate('/loggedIn');
   };
 
   return (
@@ -44,6 +45,7 @@ const Loginform = () => {
             placeholder="Enter User Name"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
+            required
           />
           <br />
           <label>Email: </label>
@@ -53,6 +55,7 @@ const Loginform = () => {
             placeholder="Enter email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
           <br />
           <label>Password: </label>
@@ -61,6 +64,7 @@ const Loginform = () => {
             placeholder="Enter Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
           <br />
           <br />

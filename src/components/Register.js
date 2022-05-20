@@ -7,6 +7,7 @@ const Register = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [regDate, setRegDate] = useState("");
+  const [roleName, setRoleName] = useState("");
   const [address, setAddress] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [userName, setUserName] = useState("");
@@ -22,6 +23,7 @@ const Register = () => {
       firstName: firstName,
       lastName: lastName,
       regDate: regDate,
+      roleName: roleName,
       address: address,
       phoneNumber: phoneNumber,
       userName: userName,
@@ -37,13 +39,14 @@ const Register = () => {
   return (
     <div className="user">
       <form className="user_form" onSubmit={(e) => handleSubmit(e)}>
-        <h3>New User Registration</h3>
+        <h3>User Registration</h3>
         <label>First Name </label>
         <input
           type="text"
           placeholder="Enter First Name"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
+          required
         />
         <br />
         <label>Last Name </label>
@@ -52,14 +55,26 @@ const Register = () => {
           placeholder="Enter Last Name"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
+          required
         />
       <br />
         <label>Reg Date </label>
         <input
-          type="text"
+          type="date"
           placeholder="Enter Reg Date"
           value={regDate}
           onChange={(e) => setRegDate(e.target.value)}
+          required
+        />
+        <br/>
+        <label>Role </label>
+        <br/>
+        <input
+          type="text"
+          placeholder="Enter Role Name"
+          value={roleName}
+          onChange={(e) => setRoleName(e.target.value)}
+          required
         />
         <br />
         <label>Address </label>
@@ -68,6 +83,7 @@ const Register = () => {
           placeholder="Enter Address"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
+          required
         />
         <br />
         <label>Phone Number </label>
@@ -76,6 +92,7 @@ const Register = () => {
           placeholder="Enter Phone Number"
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
+          required
         />
         <br />
         <label>User Name</label>
@@ -84,6 +101,7 @@ const Register = () => {
           placeholder="Enter User Name"
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
+          required
         />
         <br />
         <label>Email </label>
@@ -92,6 +110,7 @@ const Register = () => {
           placeholder="Enter email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <br />
         <label>Password </label>
@@ -100,6 +119,7 @@ const Register = () => {
           placeholder="Enter Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+         
         />
         <br />
 

@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+//import { useDispatch } from "react-redux";
+//import { selectCourseAction } from "../store/Action";
+//import "./Register.css";
+//import { useNavigate } from "react-router-dom";
 
 const Courseform = () => {
   const [c_name, setC_Name] = useState("");
@@ -7,8 +11,8 @@ const Courseform = () => {
   const [c_fees, setC_Fees] = useState(0);
 
   return (
-    <div className="course">
-      <form className="course_form">
+    <div className="course">  
+      <form className="course_form" >
         <h3>Course Information</h3>
         <label htmlFor="">Course Name </label>
         <input

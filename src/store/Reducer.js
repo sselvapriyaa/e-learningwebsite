@@ -60,9 +60,11 @@ const initialState = {
           loading: false,
           error: action.error,
         };
-      default:
-        return state;
-    }
+    
+        default:
+          return state;
+      }
+  
   };
   export default PostReducer;
   export const currentUser = (state) => state.items.userName;

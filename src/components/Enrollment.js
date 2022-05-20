@@ -5,7 +5,7 @@ const Enrollment = () => {
   const user = useSelector(currentUser);
   return (
     <div>
-      <h1>{user} Thank you for your enrollment in Glad Academy</h1>
+      <h1>Hi {user}! Thank you for your enrollment in Glad Academy</h1>
     </div>
   );
 };

@@ -21,8 +21,7 @@ export const loginAction = (postData) => async (dispatch, getState) => {
   dispatch({ type: "LOGIN_REQUEST" });
   
   try {
-   
-    const response = await http.post("/login", postData);
+    const response = await http.post("/newuser/loginUser", postData);
     //console.log("Response=", response.data);
     dispatch({ type: "LOGIN_SUCCESS", payload: response.data });
      //loggedIn = response.data;
@@ -44,3 +43,4 @@ export const getCoursesAction = () => async (dispatch, getState) => {
     dispatch({ type: "GETCOURSE_FAILURE", error });
   }
 };
+

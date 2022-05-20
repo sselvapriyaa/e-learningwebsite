@@ -1,17 +1,17 @@
 * {
-    margin: auto;
+    margin: auto;   
   }
   
   h3 {
     text-align: center;
-  }
-  
+    padding: 20px;
+    font-size: 28px; }  
   .user {
     display: flex;
     justify-content: center;
-    padding: 12px;
+    padding: 10px;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 24px;  
   }
   input {
     width: 80%;
@@ -19,6 +19,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
+    font-size: 24px;
   }
   label {
     padding: 12px 12px 12px 0;
@@ -34,6 +35,8 @@
     border-radius: 4px;
     text-transform: uppercase;
     cursor: pointer;
+    text-align: center;
+    font-size: 20px;
     font-weight: 500;
   }
   

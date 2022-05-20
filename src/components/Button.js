@@ -5,10 +5,12 @@ import "./Button.css";
 const Button = () => {
   return (
     <>
-      <Link to="/login">
+     {/* <Link to="/login">*/}
+      <Link to="/sign-in">
         <button className="btn">Sign In</button>
       </Link>
-      <Link to="/newuser/addNewUser">
+      {/*<Link to="/newuser/addNewUser">*/}
+      <Link to="/sign-up">
         <button className="btn">Sign Up</button>
       </Link>
     </>

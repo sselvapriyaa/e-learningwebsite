@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCoursesAction } from "../store/Action";
 import "./DisplayCourse.css";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 import { userName } from "./LoggedIn";
 
@@ -44,14 +44,15 @@ function DisplayCourse(props) {
                 <td> {course.courseResource}</td>
                 <td> {course.courseDesc}</td>
                 <td> {course.courseFee}</td>
-                <td>
-                 {/* <Link to="/add" className="add">
-                    Add
+                {/*<td>
+                  <Link to="/enroll" className="enroll">
+                    Enroll
                   </Link>
                   <Link to="/delete" className="delete">
                     Delete
-                  </Link>*/}
-                </td>
+                  </Link>
+
+                </td>*/}
               </tr>
             ))}
           </tbody>

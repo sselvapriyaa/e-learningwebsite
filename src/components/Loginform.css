@@ -1,23 +1,30 @@
+:root {
+  --primary: #9f589b;
+}
+
 * {
     margin: auto;
    
   }
   h3 {
     text-align: center;
+    padding: 20px;
+    font-size: 28px;
    
   }
   
   .login {
     display: flex;
     justify-content: center;
-    padding: 12px;
-    margin-top: 20px;
-    font-size: 22px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 24px;
   }
   input {
     width: 80%;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 24px;
   }
   label {
     padding: 12px 12px 12px 0;
@@ -28,11 +35,16 @@
     color: white;
     margin: 10px 20px;
     width: 60%;
-    height: 30px;
-    border: none;
+    height: 40px;
+    border: none;  
     border-radius: 4px;
     text-transform: uppercase;
     cursor: pointer;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: bold;
   }
-  
+  .submit_btn:hover {
+    background: #fff;
+    color: #1888ff;
+    transition: 250ms;
+  }

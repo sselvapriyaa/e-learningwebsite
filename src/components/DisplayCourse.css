@@ -1,3 +1,8 @@
+body {
+  background-color: rgb(243, 233, 203);
+  font-family: "Gill Sans Extrabold", sans-serif;
+ 
+}
 .title {
     text-align: center;
   }
@@ -11,14 +16,26 @@
   th,
   td {
     border: 1px solid black;
+    border-style: solid;
+    border-color: rgb(144, 79, 139);;
+    justify-content: center;
+    text-align: center;
+    /*font-family: "Gill Sans Extrabold", sans-serif;*/
+    font-weight: normal;
+    color: black;
+    font-size: 26px;
+    padding: 10px;
   }
   
   th {
     font-weight: bold;
+    
   }
   table {
     margin: auto;
     width: 60%;
     border-collapse: collapse;
+    border-style: solid;
+    border-color: rgb(144, 79, 139);;
   }
   
