@@ -18,26 +18,13 @@ function App() {
     <BrowserRouter>
       <div>
         <Navbar />
-        {/* <Header /> */}
-        <div>
-          
+        <div>        
           <Routes>
-            {/*<Route path="/" element={<Home />} />
-            <Route path="/login" element={<Loginform />} />
-            <Route path="/newuser/addNewUser" element={<Register />} />
-            <Route path="/courses" element={<LoggedIn />} />
-            <Route path="/courses/addCourses" element={<DisplayCourse />} />
-            <Route path="/userprofile" element={<UserProfile />} />
-            <Route path="/enroll" element={<Enrollment />} />
-            <Route path="/delete" element={<DeleteEnrollment />} />*/}
-
-
             <Route path="/" element={<Home />} />
             <Route path="/sign-in" element={<Loginform />} />
             <Route path="/sign-up" element={<Register />} />
             <Route path="/loggedIn" element={<LoggedIn />} />
             <Route path="/courses" element={<DisplayCourse />} />
-           {/* <Route path="/course-enroll" element={<Courseform />} />*/}
             <Route path="/userprofile" element={<UserProfile />} />
             <Route path="/enroll" element={<Enrollment />} />
             <Route path="/delete" element={<DeleteEnrollment />} />

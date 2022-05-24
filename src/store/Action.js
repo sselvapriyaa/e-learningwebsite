@@ -17,11 +17,11 @@ export const addUserAction = (postData) => async (dispatch, getState) => {
   }
 };
 
-export const loginAction = (postData) => async (dispatch, getState) => {
+export const loginAction = () => async (dispatch, getState) => {
   dispatch({ type: "LOGIN_REQUEST" });
   
   try {
-    const response = await http.post("/newuser/loginUser", postData);
+    const response = await http.post("/newuser/loginUser");
     //console.log("Response=", response.data);
     dispatch({ type: "LOGIN_SUCCESS", payload: response.data });
      //loggedIn = response.data;

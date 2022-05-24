@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState} from "react";
+import { useDispatch} from "react-redux";
 import { loginAction } from "../store/Action";
 import { useNavigate } from "react-router-dom";
 
 import "./Loginform.css";
+import Register from "./Register";
 
 const Loginform = () => {
   const [userName, setUserName] = useState("");
@@ -30,8 +31,9 @@ const Loginform = () => {
     };
     dispatch(loginAction(postData));
     /*navigate('/courses/addCourses');*/
-    navigate('/loggedIn');
+   navigate('/loggedIn');
   };
+
 
   return (
     <>
@@ -46,6 +48,14 @@ const Loginform = () => {
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
             required
+          /* ref = {Register({
+          pattern: {
+            value: /^[a-zA-Z]+$/,
+            message:'User name should contain only characters'
+          }    
+           })
+         }*/
+         /*className = {`${errors.userName ? 'input-error' : ''}`}*/
           />
           <br />
           <label>Email: </label>
