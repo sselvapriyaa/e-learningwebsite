@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCoursesAction } from "../store/Action";
 import "./DisplayCourse.css";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import { userName } from "./LoggedIn";
+import { uName } from "./LoggedIn";
+//import { userId } from "./LoggedIn";
 
 function DisplayCourse(props) {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ function DisplayCourse(props) {
     }
     return (
       <div>
-        <h1>Welcome to e-Learning Website {userName}!</h1>
+        <h1>Welcome {uName}!</h1>
         <h1 className="title"> Course List</h1>
         <table className="table table-striped">
           <thead>
@@ -33,7 +34,7 @@ function DisplayCourse(props) {
               <th> Course Resource</th>
               <th> Course Description</th>
               <th> CourseFee</th>
-          { /* <th> Actions</th>*/}
+           <th> Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -44,7 +45,7 @@ function DisplayCourse(props) {
                 <td> {course.courseResource}</td>
                 <td> {course.courseDesc}</td>
                 <td> {course.courseFee}</td>
-                {/*<td>
+                <td>
                   <Link to="/enroll" className="enroll">
                     Enroll
                   </Link>
@@ -52,7 +53,7 @@ function DisplayCourse(props) {
                     Delete
                   </Link>
 
-                </td>*/}
+                </td>
               </tr>
             ))}
           </tbody>

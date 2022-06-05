@@ -10,8 +10,9 @@ import UserProfile from "./components/UserProfile";
 import Enrollment from "./components/Enrollment";
 import DeleteEnrollment from "./components/DeleteEnrollment";
 import Home from "./components/Home";
+import Logout from "./components/Logout";
 import LoggedIn from "./components/LoggedIn";
-
+//import UserEnrollment from "./components/UserEnrollment";
 
 function App() {
   return (
@@ -23,10 +24,11 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/sign-in" element={<Loginform />} />
             <Route path="/sign-up" element={<Register />} />
+            <Route path="/log-out" element={<Logout />} />
             <Route path="/loggedIn" element={<LoggedIn />} />
             <Route path="/courses" element={<DisplayCourse />} />
             <Route path="/userprofile" element={<UserProfile />} />
-            <Route path="/enroll" element={<Enrollment />} />
+            <Route path="/enroll" element={<Enrollment />} />        
             <Route path="/delete" element={<DeleteEnrollment />} />
           </Routes>
         </div>

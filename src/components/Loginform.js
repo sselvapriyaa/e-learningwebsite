@@ -4,10 +4,13 @@ import { loginAction } from "../store/Action";
 import { useNavigate } from "react-router-dom";
 
 import "./Loginform.css";
-import Register from "./Register";
+//import Register from "./Register";
 
 const Loginform = () => {
-  const [userName, setUserName] = useState("");
+  //const [userId, setUserID] = useState("");
+  //const [firstName, setFirstName] = useState("");
+  //const [lastName, setLastName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   // const value = useSelector((state) => {
@@ -25,7 +28,7 @@ const Loginform = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const postData = {
-      username: userName,
+      userName: name,
       email: email,
       password: password,
     };
@@ -37,16 +40,17 @@ const Loginform = () => {
 
   return (
     <>
-      <h3>Login Form</h3>
+      <h3>Login Here</h3>
       <div className="login">
         <form className="login_form" onSubmit={(e) => handleSubmit(e)}>
-          <label>User Name: </label>
+       
+          <label>Name: </label>
 
           <input
             type="text"
-            placeholder="Enter User Name"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
+            placeholder="Enter First Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             required
           /* ref = {Register({
           pattern: {
@@ -57,9 +61,8 @@ const Loginform = () => {
          }*/
          /*className = {`${errors.userName ? 'input-error' : ''}`}*/
           />
-          <br />
+          <br />  
           <label>Email: </label>
-
           <input
             type="email"
             placeholder="Enter email"

@@ -13,7 +13,7 @@ const Courseform = () => {
   return (
     <div className="course">  
       <form className="course_form" >
-        <h3>Course Information</h3>
+        <h3>Add new Course</h3>
         <label htmlFor="">Course Name </label>
         <input
           type="text"

@@ -49,6 +49,7 @@ const Navbar = () => {
             Courses
           </Link>
         </li>
+       
       {/* <li className="nav-item">
           <Link
             to="/contact-us"
@@ -58,7 +59,7 @@ const Navbar = () => {
             Contact-Us
           </Link>
       </li>*/}
-
+ 
        <li className="nav-item">
           <Link
             /*to="/login"*/
@@ -77,6 +78,16 @@ const Navbar = () => {
             onClick={closeMobileMenu}
           >
             Sign Up
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            /*to="/newuser"*/
+            to="/log-out"
+            className="nav-links-mobile"
+            onClick={closeMobileMenu}
+          >
+            Log Out
           </Link>
         </li>
       </ul>

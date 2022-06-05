@@ -60,6 +60,24 @@ const initialState = {
           loading: false,
           error: action.error,
         };
+        case "ENROLL_REQUEST":
+          return {
+            ...state,
+            loading: true,
+            error: null,
+          };
+        case "ENROLL_SUCCESS":
+          return {
+            ...state,
+            loading: false,
+            items: action.payload,
+          };  
+          case "ENROLL_FAILURE":
+          return {
+            ...state,
+            loading: false,
+            items: action.payload,
+          };
     
         default:
           return state;
@@ -68,4 +86,8 @@ const initialState = {
   };
   export default PostReducer;
   export const currentUser = (state) => state.items.userName;
+  //export const currentFirstName = (state) => state.items.firstName;
+  //export const currentLastName = (state) => state.items.lastName;
+  //export const currentEnrollmentId = (state) => state.items.enrollID;
+  
   

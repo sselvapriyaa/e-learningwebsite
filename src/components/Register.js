@@ -3,7 +3,9 @@ import { useDispatch } from "react-redux";
 import { addUserAction } from "../store/Action";
 import "./Register.css";
 import { useNavigate } from "react-router-dom";
+//import { userId } from "./LoggedIn";
 const Register = () => {
+  //const [userId, setUserID] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [regDate, setRegDate] = useState("");
@@ -20,10 +22,11 @@ const Register = () => {
     
     e.preventDefault();
     const postData = {
+      
       firstName: firstName,
       lastName: lastName,
       regDate: regDate,
-      roleName: roleName,
+      role: roleName,
       address: address,
       phoneNumber: phoneNumber,
       userName: userName,
@@ -39,7 +42,8 @@ const Register = () => {
   return (
     <div className="user">
       <form className="user_form" onSubmit={(e) => handleSubmit(e)}>
-        <h3>User Registration</h3>
+        <h3>Add New User</h3>
+
         <label>First Name </label>
         <input
           type="text"
